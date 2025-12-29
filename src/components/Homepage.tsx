@@ -4,7 +4,6 @@ import { Shield, BarChart, Bot, ArrowDown } from 'lucide-react';
 const Homepage = () => {
   const heroRef = useRef(null);
   const featuresRef = useRef(null);
-  const containerRef = useRef(null);
 
   const scrollToFeatures = () => {
     document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
@@ -61,10 +60,9 @@ const Homepage = () => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden" ref={containerRef}>
+    <div className="relative overflow-hidden">
       {/* 3D Background Elements */}
       <div className="fixed inset-0 z-[-10]">
-        {/* Floating 3D Shapes with scroll parallax */}
         <div 
           className="absolute top-1/4 left-10 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl transform"
           style={{ transformStyle: 'preserve-3d' }}
@@ -132,17 +130,6 @@ const Homepage = () => {
               <ArrowDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
             </button>
           </div>
-          
-          {/* Scroll Indicator with 3D Bounce */}
-          <div 
-            data-3d 
-            data-depth="10"
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2 transform-gpu transition-transform duration-100"
-          >
-           />
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -175,7 +162,6 @@ const Homepage = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 relative">
                   🔒 Encrypted peer messaging
-                  <span className="absolute -bottom-1 left-0 w-0 group-hover:w-full h-px bg-gradient-to-r from-blue-500 to-transparent transition-all duration-500" />
                 </h3>
                 <p className="text-slate-300 leading-relaxed transform-gpu transition-transform duration-300">
                   Secure communication platform with AI-powered abuse detection to maintain a positive learning environment.
@@ -203,7 +189,6 @@ const Homepage = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 relative">
                   📊 Real-time mentor analytics
-                  <span className="absolute -bottom-1 left-0 w-0 group-hover:w-full h-px bg-gradient-to-r from-green-500 to-transparent transition-all duration-500" />
                 </h3>
                 <p className="text-slate-300 leading-relaxed transform-gpu transition-transform duration-300">
                   Comprehensive dashboard tracking student engagement, identifying at-risk students before they drop out.
@@ -231,7 +216,6 @@ const Homepage = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 relative">
                   🤖 AI task assistant
-                  <span className="absolute -bottom-1 left-0 w-0 group-hover:w-full h-px bg-gradient-to-r from-purple-500 to-transparent transition-all duration-500" />
                 </h3>
                 <p className="text-slate-300 leading-relaxed transform-gpu transition-transform duration-300">
                   Intelligent assistant recommending tools, connecting students with peers, and providing personalized support.
@@ -239,42 +223,14 @@ const Homepage = () => {
               </div>
             </div>
           </div>
-          
-          {/* Scroll to top indicator */}
-          <div className="mt-20 text-center">
-            <button
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="inline-flex items-center space-x-2 text-slate-400 hover:text-white transition-colors group"
-            >
-              <ArrowDown className="w-5 h-5 rotate-180 group-hover:-translate-y-1 transition-transform" />
-              <span>Back to top</span>
-            </button>
-          </div>
         </div>
       </section>
       
       {/* Add to your global styles */}
       <style jsx>{`
-        @keyframes bounce {
-          0%, 20%, 50%, 80%, 100% {
-            transform: translateY(0);
-          }
-          40% {
-            transform: translateY(5px);
-          }
-          60% {
-            transform: translateY(3px);
-          }
-        }
-        
         .transform-gpu {
           transform-style: preserve-3d;
           backface-visibility: hidden;
-        }
-        
-        /* Smooth scrolling */
-        html {
-          scroll-behavior: smooth;
         }
       `}</style>
     </div>
