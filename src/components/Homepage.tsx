@@ -139,11 +139,7 @@ const Homepage = () => {
             data-depth="10"
             className="absolute bottom-8 left-1/2 transform -translate-x-1/2 transform-gpu transition-transform duration-100"
           >
-            <div className="flex flex-col items-center space-y-2">
-              <span className="text-slate-400 text-sm">Scroll to explore</span>
-              <div className="w-6 h-10 border-2 border-blue-500/50 rounded-full flex justify-center">
-                <div className="w-1 h-3 bg-blue-400 rounded-full mt-2 animate-bounce" 
-                     style={{ animation: 'bounce 2s infinite' }} />
+           />
               </div>
             </div>
           </div>
