@@ -159,7 +159,7 @@ function App() {
             <div className="flex items-center space-x-2">
               <span className="text-blue-400 font-medium">Rayan Atiq</span>
               <span className="text-slate-400">&</span>
-              <span className="text-purple-400 font-medium">Arham Wahid</span>
+              <span className="text-blue-400 font-medium">Arham Wahid</span>
             </div>
             <span className="text-slate-400 hidden md:inline">•</span>
             <span className="text-slate-400 text-sm">Preventing silent dropouts with AI</span>
