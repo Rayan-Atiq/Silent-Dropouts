@@ -70,7 +70,7 @@ function App() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-3">
               {/* Removed the 404 logo and replaced with simple text */}
-              <h1 className="text-xl font-bold text-white">AI Student Tracker</h1>
+              <h1 className="text-xl font-bold text-white"></h1>
             </div>
             
             <div className="flex items-center space-x-4">
