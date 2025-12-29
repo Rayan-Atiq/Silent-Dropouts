@@ -227,7 +227,7 @@ const Homepage = () => {
           {/* Credit Section */}
           <div className="mt-20 pt-8 border-t border-slate-700/50 text-center">
             <p className="text-slate-400 text-sm">
-              <span className="text-blue-400 font-medium"></span> & <span className="text-purple-400 font-medium"></span>
+              <span className="text-blue-400 font-medium"></span><span className="text-purple-400 font-medium"></span>
             </p>
           </div>
         </div>
