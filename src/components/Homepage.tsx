@@ -223,10 +223,16 @@ const Homepage = () => {
               </div>
             </div>
           </div>
+
+          {/* Credit Section */}
+          <div className="mt-20 pt-8 border-t border-slate-700/50 text-center">
+            <p className="text-slate-400 text-sm">
+              Built by <span className="text-blue-400 font-medium">Rayan Atiq</span> & <span className="text-purple-400 font-medium">Arham Wahid</span>
+            </p>
+          </div>
         </div>
       </section>
       
-      {/* Add to your global styles */}
       <style jsx>{`
         .transform-gpu {
           transform-style: preserve-3d;
