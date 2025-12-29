@@ -7,8 +7,6 @@ import AIChatbot from './components/AIChatbot';
 import WorkActivity from './components/WorkActivity';
 import MoodTracker from './components/MoodTracker';
 import Timetable from './components/Timetable';
-import Hero3D from "./components/Hero3D";
-
 
 function App() {
   const [activeTab, setActiveTab] = useState('home');
@@ -71,10 +69,8 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 flex items-center justify-center font-mono font-bold text-white">
-                4O<span className="transform scale-x-[-1]">4</span> {/* Mirrored first 4 */}
-              </div>
-              <h1 className="text-4xl font-bold text-white"></h1>
+              {/* Removed the 404 logo and replaced with simple text */}
+              <h1 className="text-xl font-bold text-white">AI Student Tracker</h1>
             </div>
             
             <div className="flex items-center space-x-4">
@@ -155,18 +151,23 @@ function App() {
         <ActiveComponent />
       </main>
 
-      {/* Footer */}
+      {/* Footer - Updated to show names */}
       <footer className="bg-slate-900/90 border-t border-slate-700 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center space-x-2">
-            <span className="text-slate-400">Built by Team</span>
-            <span className="font-mono font-bold text-blue-400">40<span className="transform scale-x-[-1]">4</span> {/* Mirrored first 4 */}</span>
-            <span className="text-slate-400">• Preventing silent dropouts with AI</span>
+          <div className="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-2">
+            <span className="text-slate-400">Built by</span>
+            <div className="flex items-center space-x-2">
+              <span className="text-blue-400 font-medium">Rayan Atiq</span>
+              <span className="text-slate-400">&</span>
+              <span className="text-purple-400 font-medium">Arham Wahid</span>
+            </div>
+            <span className="text-slate-400 hidden md:inline">•</span>
+            <span className="text-slate-400 text-sm">Preventing silent dropouts with AI</span>
           </div>
         </div>
       </footer>
 
-      {/* Role Change Modal - Updated Version */}
+      {/* Role Change Modal */}
       {showRoleModal && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8 w-full max-w-md">
